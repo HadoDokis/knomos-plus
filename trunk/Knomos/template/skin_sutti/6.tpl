@@ -43,9 +43,7 @@
 <div id="header">
 <table border="0" cellpadding="0" cellspacing="0" id="header_table">
 	<tr valign="middle">
-		<td class="header-sinistra"><a href="%[FW_GPATH]%main.php"><img
-			src="%[IMAGE_GPATH]%header_sinistra.gif" alt="Home" width="150"
-			height="25" border="0"></a></td>
+		<td class="header-sinistra"><div class="logo-small"></div></a></td>
 		<td class="header-logo"><img src="%[IMAGE_GPATH]%header_logo.gif"
 			width="89" height="25"></td>
 		<form name="gs" method="GET" action="%[FW_GPATH]%searches.php"><input

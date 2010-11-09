@@ -1,4 +1,6 @@
 <?
+date_default_timezone_set('Europe/Rome');
+
 $PAGE[TXT_TITLE]="Knomos";
 $PAGE[TXT_CRIGHT]="&copy; 2010 <a href=\"http://www.professioneinformatica.eu\" target=\"_blank\">Professione Informatica</a>. All Rights Reserved";
 $PAGE[TXT_INFOMAIL]="<a href=\"mailto:support@professioneinformatica.eu\" target=\"_blank\">support@professioneinformatica.eu</a>";
@@ -109,21 +111,25 @@ $PAGE[JS_SHORTCUT]="
 	    	return true;
 	    }
     });
+    
+		// imposto il layout dei pulsanti
+		$( 'button, input:submit, input:button').button();
+
 	});
 	
-	// imposto il layout dei pulsanti
-	$( 'button, input:submit, input:button').button();
 	
 	// rimpiazzo il funzionamento standard della funzione javascript alert
 	window.alert = function(text, title){
 		if (!title)
 		{ title = 'Attenzione'; }
 		var dlg = $('#dlg_alert');
-		dlg.children('#dlg_alert_text').text(text);
+		dlg.children('#dlg_alert_text').html(text);
     dlg.dialog({
-			height: 140,
 			modal: true,
 			title: title,
+			resizable: false,
+			show: 'fade',
+			hide: 'fade',
 			buttons: [
 		    {
 		        text: 'Ok',
@@ -136,7 +142,7 @@ $PAGE[JS_SHORTCUT]="
 <div id='dlg_alert' style='display: none;'>
 	<p>
 		<span class='ui-icon ui-icon-alert' style='float:left; margin:0 7px 20px 0;'></span>
-		<span id='dlg_alert_text'></span>
+		<div id='dlg_alert_text'></div>
 	</p>
 </div>
 ";

@@ -1,5 +1,5 @@
 body {
-    background-color: #edf3f3;
+    background-color: #f5fafa;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 8pt;
     color: #000000;
@@ -13,7 +13,7 @@ table, td, th, tr, span, div, input, textarea, select {
 }
 
 DIV#content {
-    background-color: #FFFFFF;
+    background-color: transparent;
     margin: 0px auto;
     padding: 0px;
     width: 99%;
@@ -30,8 +30,6 @@ DIV#ombra_inf {
 }
 
 DIV#header {
-    background-image: url(../images/header_sfondo.gif);
-    background-repeat: repeat-x;
     margin: 0px;
     padding: 0px;
     border-bottom-width: 1px;
@@ -40,21 +38,13 @@ DIV#header {
 }
 
 .header-sinistra {
-    /*width: 165px;*/
     width: 12%;
-    background-color: #B1AE9B;
-    border-right-width: 1px;
-    border-right-style: solid;
-    border-right-color: #8C8C8C;
     margin: 0px;
     padding: 0px;
     text-align: center;
 }
 
 .header-logo {
-    border-left-width: 1px;
-    border-left-style: solid;
-    border-left-color: #FFFFFF;
 }
 
 .header-td-03 {
