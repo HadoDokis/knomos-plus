@@ -1,0 +1,100 @@
+diff -ru phplayersmenu-3.1.3.orig/DUMPS/mysql.demo_data.dump phplayersmenu-3.1.3/DUMPS/mysql.demo_data.dump
+--- phplayersmenu-3.1.3.orig/DUMPS/mysql.demo_data.dump	2004-06-20 01:02:20.000000000 +0200
++++ phplayersmenu-3.1.3/DUMPS/mysql.demo_data.dump	2004-06-20 11:37:26.575047776 +0200
+@@ -79,6 +79,6 @@
+ INSERT INTO phplayersmenu VALUES ('710', '590', 'The DOM Event Model', 'http://www.brainjar.com/dhtml/events/default4.asp', '', '', 'DOM', '710', '0');
+ INSERT INTO phplayersmenu VALUES ('720', '590', 'Opera JS Support', 'http://www.opera.com/docs/specs/js/', '', '', 'DOM', '720', '0');
+ 
+-INSERT INTO phplayersmenu_i18n VALUES ('it', 500, 'Navigatori', '');
+-INSERT INTO phplayersmenu_i18n VALUES ('it', 550, 'Navigatori non liberi', '');
++INSERT INTO phplayersmenu_i18n VALUES ('it', 500, 'Navigatori', '', 'mozilla.org_images_mozilla-16.png');
++INSERT INTO phplayersmenu_i18n VALUES ('it', 550, 'Navigatori non liberi', '', '');
+ 
+diff -ru phplayersmenu-3.1.3.orig/DUMPS/mysql.start.dump phplayersmenu-3.1.3/DUMPS/mysql.start.dump
+--- phplayersmenu-3.1.3.orig/DUMPS/mysql.start.dump	2003-09-19 18:18:49.000000000 +0200
++++ phplayersmenu-3.1.3/DUMPS/mysql.start.dump	2004-06-20 11:38:02.236626392 +0200
+@@ -26,6 +26,7 @@
+ 	id int NOT NULL,
+ 	text text,
+ 	title text,
++	icon text,
+ 	PRIMARY KEY (language, id)
+ );
+ 
+diff -ru phplayersmenu-3.1.3.orig/DUMPS/pgsql.demo_data.dump phplayersmenu-3.1.3/DUMPS/pgsql.demo_data.dump
+--- phplayersmenu-3.1.3.orig/DUMPS/pgsql.demo_data.dump	2004-06-20 01:03:46.000000000 +0200
++++ phplayersmenu-3.1.3/DUMPS/pgsql.demo_data.dump	2004-06-20 11:39:07.482707480 +0200
+@@ -79,6 +79,6 @@
+ INSERT INTO phplayersmenu VALUES ('710', '590', 'The DOM Event Model', 'http://www.brainjar.com/dhtml/events/default4.asp', '', '', 'DOM', '710', '0');
+ INSERT INTO phplayersmenu VALUES ('720', '590', 'Opera JS Support', 'http://www.opera.com/docs/specs/js/', '', '', 'DOM', '720', '0');
+ 
+-INSERT INTO phplayersmenu_i18n VALUES ('it', 500, 'Navigatori', '');
+-INSERT INTO phplayersmenu_i18n VALUES ('it', 550, 'Navigatori non liberi', '');
++INSERT INTO phplayersmenu_i18n VALUES ('it', 500, 'Navigatori', '', 'mozilla.org_images_mozilla-16.png');
++INSERT INTO phplayersmenu_i18n VALUES ('it', 550, 'Navigatori non liberi', '', '');
+ 
+diff -ru phplayersmenu-3.1.3.orig/DUMPS/pgsql.start.dump phplayersmenu-3.1.3/DUMPS/pgsql.start.dump
+--- phplayersmenu-3.1.3.orig/DUMPS/pgsql.start.dump	2003-09-19 18:18:57.000000000 +0200
++++ phplayersmenu-3.1.3/DUMPS/pgsql.start.dump	2004-06-20 11:39:30.495209048 +0200
+@@ -25,6 +25,7 @@
+ 	id int2 NOT NULL,
+ 	text text,
+ 	title text,
++	icon text,
+ 	PRIMARY KEY (language, id)
+ );
+ 
+diff -ru phplayersmenu-3.1.3.orig/example-db-hormenu.php phplayersmenu-3.1.3/example-db-hormenu.php
+--- phplayersmenu-3.1.3.orig/example-db-hormenu.php	2004-06-20 01:06:13.000000000 +0200
++++ phplayersmenu-3.1.3/example-db-hormenu.php	2004-06-20 11:42:38.037698256 +0200
+@@ -71,7 +71,8 @@
+ 	'language'	=> 'language',
+ 	'id'		=> 'id',
+ 	'text'		=> 'text',
+-	'title'		=> 'title'
++	'title'		=> 'title',
++	'icon'		=> 'icon'
+ ));
+ */
+ /* HOWTO use data taken from the PgMarket 'categories'
+@@ -96,7 +97,8 @@
+ 	'language'	=> 'lang',
+ 	'id'		=> 'category_id',
+ 	'text'		=> 'name',
+-	'title'		=> ''
++	'title'		=> '',
++	'icon'		=> ''
+ ));
+ $mid->setPrependedUrl('/~pratesi/pgmarket/shopping/index.php?id=');
+ //$mid->scanTableForMenu('hormenu1', 'en');
+diff -ru phplayersmenu-3.1.3.orig/lib/layersmenu-common.inc.php phplayersmenu-3.1.3/lib/layersmenu-common.inc.php
+--- phplayersmenu-3.1.3.orig/lib/layersmenu-common.inc.php	2004-06-18 11:05:29.000000000 +0200
++++ phplayersmenu-3.1.3/lib/layersmenu-common.inc.php	2004-06-20 11:48:09.835257360 +0200
+@@ -187,7 +187,8 @@
+ 	'language'	=> 'language',
+ 	'id'		=> 'id',
+ 	'text'		=> 'text',
+-	'title'		=> 'title'
++	'title'		=> 'title',
++	'icon'		=> 'icon'
+ );
+ /**
+ * A temporary array to store data retrieved from the DB and to perform the depth-first search
+@@ -593,7 +594,8 @@
+ 			SELECT ' .
+ 				$this->tableFields_i18n['id'] . ' AS id, ' .
+ 				$this->tableFields_i18n['text'] . ' AS text, ' .
+-				$this->tableFields_i18n['title'] . ' AS title
++				$this->tableFields_i18n['title'] . ' AS title, ' .
++				$this->tableFields_i18n['icon'] . ' AS icon
+ 			FROM ' . $this->tableName_i18n . '
+ 			WHERE ' . $this->tableFields_i18n['id'] . ' <> 1
+ 				AND ' . $this->tableFields_i18n['language'] . ' = ' . "'$language'" . '
+@@ -601,6 +603,7 @@
+ 		while ($dbresult->fetchInto($row, DB_FETCHMODE_ASSOC)) {
+ 			$this->_tmpArray[$row['id']]['text'] = $row['text'];
+ 			$this->_tmpArray[$row['id']]['title'] = $row['title'];
++			$this->_tmpArray[$row['id']]['icon'] = $row['icon'];
+ 		}
+ 	}
+ 	unset($dbresult);

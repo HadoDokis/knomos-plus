@@ -1,0 +1,522 @@
+/*CALENDAR SMALL*/
+.calendar-gior-col-body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFF2CC;
+	overflow-y: scroll;//ie
+	overflow-x: hidden; //ie
+	overflow: -moz-scrollbars-vertical; //moz
+	overflow: auto; //opera
+}
+.calendar-gior-col-body TABLE,TD,TH,TR,SPAN,DIV,SELECT,INPUT,TEXTAREA {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.calendar-gior-col-table {
+	margin: 0px;
+	padding: 0px;
+	width:98%;
+	background-color: #FFFFFF;
+	font-size: 7pt;
+}
+BODY.calendar-col-body {
+	background-color: #EEEDE8;
+	margin: 0px;
+	padding: 0px;
+}
+BODY.calendar-col-body TH {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+}
+IFRAME#calendar_iframe {
+	margin: 0px 0px 6px;
+	width: 100%;
+}
+TABLE#calendar {
+	background-color: #EEEDE8;
+	margin: 0px 0px 6px;
+	width: 100%;
+}
+FORM#calendar_form {
+	padding: 2px;
+	margin: 0px;
+	text-align: center;
+}
+FORM#calendar_form select {
+	font-size: 7pt;
+	background-color: #DEDDD8;
+	margin: 0px;
+	padding: 0px;
+}
+TABLE#calendar_table {
+	margin-top: 4px;
+	width: 100%;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+TABLE#calendar_table th {
+	background-color: #D2CFC2;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #FFFFFF;
+	border-bottom-color: #A4A3A0;
+}
+TABLE#calendar_table a {
+	text-decoration: none;
+	display: block;
+	padding: 1px;
+	margin: 0px;
+	font-size: 7pt;
+}
+TABLE#calendar_table a:hover {
+	text-decoration: none;
+	display: block;
+	border: 1px solid #FFFFFF;
+}
+/*CALENDAR GIRNO*/
+.calendar-normal {
+	margin: 0px;
+	padding: 1px 4px 6px;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+	overflow: -moz-scrollbars-vertical; 
+	overflow: auto; 
+	background-color: #edf3f3;
+}
+.calendar-normal-giorno-table {
+	background-color: #B1AE9B;
+	margin: 0px;
+	padding: 0px;
+	width:100%;
+}
+A.calendar-link {
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+A.calendar-link:hover {
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+.toolbar-calendar-div {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #6F6452;
+	margin: 0px;
+	padding: 0px 2px 1px;
+	vertical-align: top;
+}
+.toolbar-calendar-table {
+	margin: 0px;
+	width: 100%;
+}
+TABLE.toolbar-calendar-table a {
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 4px 0px 0px;
+	display: block;
+	text-align: center;
+	margin: 0px;
+}
+TABLE.toolbar-calendar-table a:hover {
+	text-decoration: underline;
+}
+.toolbar-calendar-data {
+	color: #2e6e9e;
+	font-weight: bold;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FFFFFF;
+	font-size: 12pt;
+	padding-right: 2px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	width: 200px;
+}
+.toolbar-calendar-td {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #B7B6B6;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: top;
+}
+.ora-cal-giorno-link {
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.ico-01 {
+	margin: 0px 1px 1px 0px;
+	padding: 2px;
+	vertical-align: middle;
+}
+.pulsante-ico-cal-link {
+	margin: 0px 1px 1px 4px;
+	padding: 0px;
+	float: right;
+	display: inline;
+}
+A.pulsante-ico-cal-link IMG:hover {
+	background-color: #FFEFC2;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #807D6A;
+	border-bottom-color: #807D6A;
+	border-left-color: #FFFFFF;
+}
+A.pulsante-ico-cal-link IMG {
+	padding: 2px;
+	margin: 0px;
+	background-color: #EAEAEA;
+	border: 1px solid #FFFFFF;
+}
+.calendar-link-nav {
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 2px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-size: 8pt;
+}
+.calendar-campo-01 {
+	font-weight: bold;
+	color: #2e6e9e;
+	background-color: #F4EEDE;
+	padding: 0px;
+	margin-top: 2px;
+	margin-bottom: 3px;
+}
+/*TABLE CALENDAR MESE GRAN*/
+.calendar-mese-table-gran {
+	background-color: #EEEDE8;
+	margin: 0px;
+	padding: 0px;
+	width:100%;
+}
+TABLE.calendar-mese-table-gran TH {
+	background-color: #2e6e9e;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 1px;
+
+}
+TABLE.calendar-mese-table-gran A {
+}
+TABLE.calendar-mese-table-gran P {
+	margin: 0px 0px 6px;
+	padding: 0px;
+}
+/*CALENDAR SETTIMANA*/
+.calendar-settim-table {
+	background-color: #EEEDE8;
+	margin: 0px;
+	padding: 0px;
+	width:100%;
+}
+TABLE.calendar-settim-table P {
+	margin: 0px 0px 6px;
+	padding: 0px;
+}
+/*////CALENDAR GIORNI////*/
+/*Calendar Small - links */
+.cal-giorno-non-lav {
+	border: 1px solid #D9D7CC;
+	background-color: #FBE6CF;
+	color: #000000;
+}
+A.cal-giorno-non-lav:hover {
+	color: #CC0000;
+}
+.cal-giorno-appunt {
+	font-weight: bold;
+	border: 1px solid #D9D7CC;
+	background-color: #BC4C4C;
+	color: #FFFFFF;
+}
+A.cal-giorno-appunt:hover {
+	background-color: #F30000;
+	color: #FFFFFF;
+}
+.cal-giorno-pas {
+	border: 1px solid #D9D7CC;
+	color: #686866;
+}
+A.cal-giorno-pas:hover {
+	color: #CC0000;
+}
+.cal-giorno-normal {
+	border: 1px solid #D9D7CC;
+	background-color: #FFFFFF;
+	color: #000000;
+}
+A.cal-giorno-normal:hover {
+	color: #CC0000;
+}
+.cal-giorno-attuale {
+	border: 1px solid #D9D7CC;
+	background-color: #009900;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+A.cal-giorno-attuale:hover {
+	background-color: #12BD00;
+	color: #FFFFFF;
+}
+.cal-giorno-01 {
+	border: 1px solid #D9D7CC;
+	background-color: #F2A955;
+	color: #000000;
+}
+A.cal-giorno-01:hover {
+	background-color: #F39500;
+	color: #FFFFFF;
+}
+/*CALENDAR Mese/Settimana - link giorno*/
+TD.cal-giorno-normal-over {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #FFFFFF;
+	background-color: #FFFFFF;
+}
+TD.cal-giorno-pas-over {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #FFFFFF;
+}
+TD.cal-giorno-non-lav-over {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #FFFFFF;
+	background-color: #FBE6CF;
+}
+.cal-giorno-attuale-link .ui-widget-content A {
+	color:#FFFFFF;	
+}
+A.cal-giorno-attuale-link {
+	color:#FFFFFF;
+	background-color: #2e6e9e;
+	display: block;
+	margin: 0px;
+	padding: 1px 2px 3px;
+	font-weight: bold;
+}
+A.cal-giorno-attuale-link:hover {
+	color:#FFFFFF;
+	background-color: #2e6e9e;
+}
+A.cal-giorno-pas-link {
+	color:#666666;
+	display: block;
+	margin: 0px;
+	padding: 1px 2px 3px;
+	font-weight: bold;
+}
+A.cal-giorno-pas-link:hover {
+	color:#FF0000;
+	background-color: #FFFFFF;
+}
+A.cal-giorno-normal-link {
+	color:#2e6e9e;
+	display: block;
+	margin: 0px;
+	padding: 1px 2px 3px;
+	font-weight: bold;
+	background-color: #eaf4fd;
+}
+A.cal-giorno-normal-link:hover {
+	color:#FF0000;
+	background-color: #FFEAAD;
+}
+A.cal-giorno-appunt-link {
+	background-color: #BC4C4C;
+	color:#FFFFFF;
+	display: block;
+	margin: 0px;
+	padding: 1px 2px 3px;
+	font-weight: bold;
+}
+A.cal-giorno-appunt-link:hover {
+	color:#FFFFFF;
+	background-color: #FF0000;
+}
+A.cal-giorno-01-link {
+	background-color: #F2A955;
+	color:#FFFFFF;
+	display: block;
+	margin: 0px;
+	padding: 1px 2px 3px;
+	font-weight: bold;
+}
+A.cal-giorno-01-link:hover {
+	color:#FFFFFF;
+	background-color: #FEC630;
+}
+A.cal-giorno-non-lav-link {
+	background-color: #FFF0DF;
+	color:#2e6e9e;
+	display: block;
+	margin: 0px;
+	padding: 1px 2px 3px;
+	font-weight: bold;
+}
+A.cal-giorno-non-lav-link:hover {
+	color:#FF0000;
+	background-color: #FFFFFF;
+}
+/*CALENDAR RIGE GIORNO*/
+.riga-cal-01 {
+	background-color: #f8f8f5;
+}
+.riga-cal-01-over {
+	background-color: #FDFBF4;
+}
+.ui-widget-content .riga-appunt-over a {
+	color: #2e6e9e;
+	font-weight: bold;	
+}
+.riga-appunt-over {
+	background-color: #EAF4FD;
+	color: #2e6e9e;
+}
+.ui-widget-content .riga-appunt-01 a {
+	color: #FFFFFF;	
+}
+.riga-appunt-01 {
+	color: #FFFFFF;
+	background-color: #2e6e9e;
+}
+.riga-appunt-01-over {
+	color: #FFFFFF;
+	background-color: #FF0000;
+}
+.riga-appunt-01-sub {
+	color: #2e6e9e;
+	background-color: #eaf4fd;
+}
+.riga-appunt-02 {
+	color: #FFFFFF;
+	background-color: #2F8831;
+}
+.riga-appunt-02-over {
+
+	color: #FFFFFF;
+	background-color: #20A623;
+}
+.riga-appunt-02-sub {
+
+	color: #000000;
+	background-color: #C2DDC3;
+}
+.riga-appunt-03 {
+	color: #FFFFFF;
+	background-color: #D1852E;
+}
+.riga-appunt-03-over {
+
+	color: #FFFFFF;
+	background-color: #F68400;
+}
+.riga-appunt-03-sub {
+
+	color: #000000;
+	background-color: #F1CEA6;
+}
+.ui-widget-content A.ora-cal-giorno-link:hover {
+	color: #81b0d3;	
+}
+.ora-link-appunt {
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	display: block;
+}
+A.ora-link-appunt:hover {
+	font-weight: bold;
+	color: #81b0d3;
+	text-decoration: none;
+}
+.calendar-gior-scadenze {
+	margin: 0px;
+	background-color: #FFFAEB;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #B9B4A2;
+	border-left-color: #B9B4A2;
+	width: 80%;
+	padding: 0px;
+	text-align: left;
+}
+.calendar-gior-scadenze P {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.calendar-scadenze-tit {
+	font-size: 9pt;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	margin: 0px;
+	padding: 2px;
+	background-color: #FFFFFF;
+	text-align: center;
+	/*
+	background-image: url(../images/scadenze_sfondo.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	*/
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E7E4DD;
+}

@@ -1,0 +1,935 @@
+H1, H2, H3, H4, H5, H6 {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #2E6E9E;		
+}
+
+H1 {
+    font-size: 16pt;
+    text-transform: uppercase;
+    background-color: #E5E8E2;
+    margin: 0px 0px 10px;
+    padding: 5px 5px 5px 7px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #FFFFFF;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #B9B4A2;
+}
+
+H1 IMG {
+    margin-right: 8px;
+}
+
+H2 {
+    font-size: 15pt;
+    text-transform: uppercase;
+    background-color: #E5E8E2;
+    margin: 0px 0px 10px;
+    padding: 4px 4px 4px 6px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #FFFFFF;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #B9B4A2;
+}
+
+H3 {
+    font-size: 13pt;
+    text-transform: uppercase;
+    background-color: #E5EFF6;
+    margin: 0px 0px 10px;
+    padding: 4px 4px 4px 6px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #FFFFFF;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #B9B4A2;
+}
+
+H4 {
+    font-size: 13pt;
+    text-transform: uppercase;
+    background-color: #F3F8FC;
+    margin: 0px 0px 10px;
+    padding: 4px 4px 4px 6px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #B9B4A2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #B9B4A2;
+}
+
+H5 {
+    font-size: 13pt;
+    text-transform: uppercase;
+    background-color: #F7F6F2;
+    margin: 0px 0px 10px;
+    padding: 2px 2px 2px 4px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #B9B4A2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #B9B4A2;
+    font-weight: bold;
+}
+
+H6 {
+    font-size: 10pt;
+    text-transform: uppercase;
+    margin: 0px 0px 10px;
+    padding: 2px;
+}
+
+.col-fuorifido-tit {
+    display: block;
+    font-weight: bold;
+    margin: 0px 0px 5px;
+    padding: 2px 2px 2px 3px;
+    text-decoration: none;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #DEDDD8;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #DEDDD8;
+    background-color: #FFF2CC;
+    color: #2e6e9e;
+}
+
+DIV#main {
+    margin: 12px auto;
+    padding: 3px;
+    width: 98%;
+}
+
+DIV#main FORM {
+    margin: 0px;
+}
+
+DIV#main TD {
+}
+
+.campo-focus-02 {
+    background-color: #ccdfeb;
+}
+
+.riga-hidden {
+    display: none
+}
+
+.riga-focus-form {
+    background-color: #F7F6F2;
+}
+
+.form-01 {
+    padding: 6px;
+}
+
+.form-01-table {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #B9B4A2;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    background-color: #EEEDE8;
+}
+
+.form-01-table TD {
+    padding: 5px;
+}
+
+.form-riga-sep {
+    font-size: 8px;
+    height: 8px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #B9B4A2;
+    border-bottom-color: #FFFFFF;
+    background-color: #DEDDD8;
+    margin: 0px;
+    padding: 0px;
+}
+
+.obbligat-campo {
+    background-color: #D5ECCC;
+    color: #CC0000;
+}
+
+.main-help {
+    padding: 0px;
+    margin-top: auto;
+    margin-right: 2px;
+    margin-bottom: auto;
+    margin-left: 2px;
+}
+
+.main-help-desc {
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #B1AE9B;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #B1AE9B;
+    border-left-color: #FFFFFF;
+    position: absolute;
+    width: 100px;
+    background-color: #F3EDDC;
+    margin: 0px;
+    padding: 6px 6px 6px 20px;
+    color: #666666;
+    font-size: 7pt;
+    display: inline;
+}
+
+.obbligat-txt {
+    font-weight: bold;
+    color: #009900;
+}
+
+li {
+    list-style-image: url(../images/list_img_01.gif);
+    margin: 0px 0px 6px;
+    padding: 0px;
+}
+
+.grid-01 {
+    background-color: #E5E8E2;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #DEDDD8;
+    border-bottom-color: #B1AE9B;
+}
+
+TABLE.grid-01 TH {
+    background-color: #DEDDD8;
+    font-weight: bold;
+    color: #5C717F;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+TABLE.grid-01 TH IMG {
+    margin-left: 3px;
+}
+
+A {
+    color: #2E6E9E;
+}
+
+A:HOVER {
+    color: #72abd6;
+}
+
+button.ui-button-small {
+	height: 1.7em;
+	width: 1.6em
+}
+
+.ui-button .ui-button-small .ui-button-text {
+    line-height: 0;
+		font-size: larger;
+}
+
+.riga-01 {
+    background-color: #F7F6F2;
+}
+
+.riga-focus-a {
+    background-color: #FFF7E1;
+    color: #CC0000;
+}
+
+.riga-02 {
+    background-color: #EEEDE8;
+}
+
+.riga-descrip-01 {
+    background-color: #F7F6F2;
+    display: none;
+    color: #6E6D68;
+}
+
+.riga-descrip-02 {
+    background-color: #EEEDE8;
+    display: none;
+    color: #504F49;
+}
+
+.riga-descrip-focus {
+    background-color: #FFFFFF;
+    color: #CC0000;
+}
+
+.riga-pag {
+    background-color: #DEDDD8;
+}
+
+.pag-select {
+    font-size: 7pt;
+    font-weight: bold;
+    background-color: #F7F6F2;
+    margin: 0px;
+    padding: 0px;
+    color: #2e6e9e;
+}
+
+.bot-submit {
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #2e6e9e;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #FFFFFF;
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+    border-left-color: #FFFFFF;
+}
+
+.bot-cancel {
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #B1AE9B;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #FFFFFF;
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+    border-left-color: #FFFFFF;
+}
+
+.grid-02 {
+    margin: 0px;
+    padding: 0px;
+}
+
+TABLE.grid-02 TH {
+    background-color: #DEDDD8;
+    font-weight: bold;
+    color: #5C717F;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+TABLE.grid-02 TH IMG {
+    margin-left: 3px;
+}
+
+.riga-select {
+    background-color: #E5EFF6;
+}
+
+.link-nome-normal {
+    font-weight: bold;
+    color: #0061A8;
+    text-decoration: none;
+}
+
+.link-nome-select {
+    font-weight: bold;
+    color: #800000;
+    text-decoration: none;
+}
+
+.riga-select-sub {
+    background-color: #F3F8FC;
+}
+
+.riga-desc-pratt {
+    background-color: #F3F8FC;
+}
+
+.desc-pratt-note-campo {
+    border: 1px solid #999999;
+    width: 98%;
+    display: block;
+    margin: 0px;
+}
+
+.desc-pratt-note {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #FFFFFF;
+}
+
+.desc-pratt-dat {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #C2DAEB;
+}
+
+.desc-pratt-note-campo-focus {
+    border: 1px solid #999999;
+    width: 98%;
+    display: block;
+    margin: 0px;
+    background-color: #FFF2CC;
+}
+
+.pulsante-ico-link {
+    margin: 0px 1px 1px 0px;
+    padding: 0px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+A.pulsante-ico-link IMG:hover {
+    background-color: #FFFFFF;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #807D6A;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    border-left-color: #807D6A;
+}
+
+A.pulsante-ico-link IMG {
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #FFFFFF;
+    border-right-color: #807D6A;
+    border-bottom-color: #807D6A;
+    border-left-color: #FFFFFF;
+    padding: 2px;
+    margin: 0px;
+    background-color: #DEDDD8;
+}
+
+.borde-01 {
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #FFFFFF;
+    border-right-color: #B1AE9B;
+    border-bottom-color: #B1AE9B;
+    border-left-color: #FFFFFF;
+}
+
+.errore-tr {
+    font-weight: bold;
+    color: #CC0000;
+}
+
+.errore-campo {
+    background-color: #2e6e9e;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.errore-riga-focus {
+    background-color: #F7F6F2;
+    font-weight: bold;
+    color: #CC0000;
+}
+
+.errore-tit {
+    background-color: #2e6e9e;
+    color: #FFFFFF;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #000000;
+}
+
+.gruppo-riga {
+    background-color: #F7F6F2;
+}
+
+.gruppo-riga-over {
+    background-color: #FFFFFF;
+}
+
+/*PERMESSI (IFRAME)//////////////////////////////////////////////////////*/
+.permessi-01 {
+    background-color: #F5F2EA;
+    margin: 0px;
+    padding: 4px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #DEDDD8;
+    border-bottom-color: #DEDDD8;
+}
+
+.per-iframe-body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    background-color: #F5F2EA;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: scroll;
+    / /ie overflow-x:hidden;
+    / /ie overflow:-moz-scrollbars-vertical;
+    / /moz overflow:auto;
+    / /opera
+}
+
+IFRAME.per-iframe {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.per-iframe-body TABLE, TD, TH, TR, SPAN, DIV, SELECT, INPUT, TEXTAREA {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+}
+
+.per-iframe-body INPUT, TEXTAREA, SELECT {
+    padding: 1px;
+    margin: 0px;
+}
+
+.per-tit {
+    font-weight: bold;
+    background-color: #B1AE9B;
+    color: #FFFFFF;
+}
+
+.per-riga-sep {
+    font-size: 0px;
+    height: 0px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #B9B4A2;
+    border-bottom-color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+}
+
+.per-riga-01 {
+    background-color: #F7F6F2;
+}
+
+.per-riga-focus-a {
+    background-color: #FFF7E1;
+    color: #CC0000;
+}
+
+.per-riga-02 {
+    background-color: #EEEDE8;
+}
+
+.per-select-default-si {
+    color: #FFFFFF;
+    background-color: #339900;
+    font-weight: bold;
+}
+
+.per-select-default-no {
+    color: #FFFFFF;
+    background-color: #FF0000;
+    font-weight: bold;
+}
+
+.per-table {
+    background-color: #DEDDD8;
+    width: 99%;
+}
+
+/*FINE PERMESSI (IFRAME)//////////////////////////////////////////////////////*/
+.abc-div {
+    background-color: #EEEDE8;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #B9B4A2;
+    border-bottom-color: #B9B4A2;
+    padding: 4px 4px 6px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.abc-div A {
+    background-color: #F7F6F2;
+    font-size: 7pt;
+    font-weight: bold;
+    text-decoration: none;
+    border-top: 1px solid #FFFFFF;
+    border-right: 1px solid #D9D7CC;
+    border-bottom: 1px solid #D9D7CC;
+    border-left: 1px solid #FFFFFF;
+    display: inline;
+    padding-top: 2px;
+    padding-right: 4px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+}
+
+.abc-div A:hover {
+    background-color: #FFFFFF;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #D9D7CC;
+    border-right-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    border-left-color: #D9D7CC;
+    text-decoration: underline;
+}
+
+.rinvio {
+    background-color: #DEDDD8;
+    margin: 0px;
+    padding: 0px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    /*border-top-style: solid;*/
+    /*border-bottom-style: solid;*/
+    border-top-color: #B1AE9B;
+    border-bottom-color: #B1AE9B;
+}
+
+.rinvio-over {
+    background-color: #B1AE9B;
+    margin: 0px;
+    padding: 0px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    /*border-top-style: solid;*/
+    /*border-bottom-style: solid;*/
+    border-top-color: #DEDDD8;
+    border-bottom-color: #333333;
+}
+
+.rinvio TD, .rinvio-over TD {
+    padding: 6px;
+}
+
+.rinvio TR, .rinvio-over TR {
+    background-color: #F5F2EA;
+}
+
+.rinvio-over-sub {
+    background-color: #FFFFFF;
+}
+
+.rinvio TH {
+    background-color: #2e6e9e;
+    /*background-color: #666666;*/
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #FFFFFF;
+    border-bottom-color: #333333;
+    font-size: 9pt;
+    font-weight: normal;
+}
+
+.rinvio-over TH {
+    background-color: #2e6e9e;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #FFFFFF;
+    border-bottom-color: #333333;
+    font-size: 9pt;
+    font-weight: normal;
+}
+
+.rinvio-resalt-01 {
+    font-weight: bold;
+    color: #2e6e9e;
+}
+
+.rinvio-tit {
+    font-size: 13pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.rinvio-sep {
+    font-size: 5px;
+    background-color: #B1AE9B;
+    margin: 0px;
+    padding: 0px;
+    height: 5px;
+}
+
+.sezione {
+    background-color: #2e6e9e;
+    color: #FFFFFF;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #B9B4A2;
+    border-bottom-color: #B9B4A2;
+    padding: 0px 0px 0px;
+    text-align: center;
+    line-height: 0px;
+}
+
+.sezione1 {
+    background-color: #2e6e9e;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #FFFFFF;
+    border-bottom-color: #333333;
+    font-size: 9pt;
+    font-weight: normal;
+}
+
+.pratica {
+    background-color: #DEDDD8;
+    margin: 0px;
+    padding: 4px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #B1AE9B;
+    border-bottom-color: #B1AE9B;
+}
+
+.pratica-over {
+    background-color: #B1AE9B;
+    margin: 0px;
+    padding: 4px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #DEDDD8;
+    border-bottom-color: #333333;
+}
+
+.pratica TD, .pratica-over TD {
+    padding: 6px;
+}
+
+.pratica TR, .pratica-over TR {
+    background-color: #F5F2EA;
+}
+
+.pratica-over-sub {
+    background-color: #FFFFFF;
+}
+
+.pratica TH {
+    background-color: #2e6e9e;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #FFFFFF;
+    border-bottom-color: #333333;
+    font-size: 9pt;
+    font-weight: normal;
+}
+
+.pratica-over TH {
+    background-color: #2e6e9e;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #FFFFFF;
+    border-bottom-color: #333333;
+    font-size: 9pt;
+    font-weight: normal;
+}
+
+.pratica-resalt-01 {
+    font-weight: bold;
+    color: #2e6e9e;
+}
+
+.pratica-tit {
+    font-size: 13pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.pratica-sep {
+    font-size: 5px;
+    background-color: #B1AE9B;
+    margin: 0px;
+    padding: 0px;
+    height: 5px;
+}
+
+/*TARIFA NAZIONALLE FORENSE - TNF (IFRAME)//////////////////////////////////////////////////////*/
+.tnf-01 {
+    background-color: #DEDDD8;
+    margin: 0px;
+    padding: 4px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #B1AE9B;
+    border-bottom-color: #B1AE9B;
+}
+
+.tnf-iframe-body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    background-color: #DEDDD8;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: scroll;
+    / /ie overflow-x:hidden;
+    / /ie overflow:-moz-scrollbars-vertical;
+    / /moz overflow:auto;
+    / /opera
+}
+
+IFRAME.tnf-iframe {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.tnf-iframe-body TABLE, TD, TH, TR, SPAN, DIV, SELECT, INPUT, TEXTAREA {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+}
+
+.tnf-iframe-body INPUT, TEXTAREA, SELECT {
+    padding: 1px;
+    margin: 0px;
+}
+
+.tnf-table {
+    background-color: #DEDDD8;
+    width: 99%;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: #FFFFFF;
+    border-bottom-color: #F5F2EA;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+    border-left-width: 1px;
+}
+
+.tnf-table TD {
+    padding: 6px;
+}
+
+.tnf-table TR {
+    background-color: #F5F2EA;
+}
+
+.tnf-table TH {
+    padding: 2px 2px 2px 6px;
+    background-color: #FFFFFF;
+    color: #2e6e9e;
+    font-size: 8pt;
+    font-weight: bold;
+    text-align: left;
+}
+
+.tnf-table TH INPUT {
+    /*background-color: #FFF2CC;*/
+    color: #2e6e9e;
+}
+
+.tnf-total {
+    font-weight: bold;
+    color: #2e6e9e;
+}
+
+.tnf-sep {
+    background-color: #DEDDD8;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*FINE TARIFA NAZIONALLE FORENSE - TNF (IFRAME)//////////////////////////////////////////////////////*/
+.operatori {
+    border: none;
+}
+
+.operatori A {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ui-autocomplete-input {
+    margin: 0;
+    padding: 0.2em 0.1em 0.1em 0.2em;
+}
+ul.ui-autocomplete {
+	max-height: 200px;
+	overflow: auto;
+	font-size: 0.9em;
+}

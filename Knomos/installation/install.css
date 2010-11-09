@@ -1,0 +1,358 @@
+/**
+* @version $Id: install.css,v 1.4 2005/01/06 01:13:30 eddieajau Exp $
+* @package Mambo
+* @copyright (C) 2000 - 2005 Miro International Pty Ltd
+* @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
+* Mambo is Free Software
+*/
+body {
+	margin: 0px;
+	padding: 0px;
+	color : #333;
+	background-color : #dbd8ce;
+	font-size : 11px;
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+}
+
+#wrapper {
+        border: 0px;
+        margin: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px;
+}
+
+#header {
+	background-position: right top;
+	border-bottom: 4px solid #333333;
+	background-image: url(header_knomos_fondo.gif);
+	background-repeat: repeat-x;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+}
+
+#knomos {
+        position: relative;
+        width: 100%;
+        background: url(header_knomos.gif) no-repeat right top;
+        margin: 0px;
+        padding: 0px;
+}
+
+#stepbar {
+	background-color: #EEEDE8;
+	width: 170px!important;
+	width: 170px;
+	font-size: 11px;
+	float: left;
+	text-align: left;
+	padding: 5px;
+}
+
+#step {
+	background: url(install_logo.png) no-repeat;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: left;
+	color: #5c717f;
+	padding: 10px 0px 20px 80px;
+	white-space: nowrap;
+	position: relative;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: capitalize;
+}
+
+.step-on {
+	color: #FFFFFF;
+	background: #9D1D1D;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 5px 5px 5px 8px;
+	margin-bottom: 2px;
+	border-top: 1px solid #FFFFFF;
+	border-right: 2px solid #333333;
+	border-bottom: 2px solid #333333;
+	border-left: 1px solid #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.step-ok {
+	color: #009900;
+	background: #b6d4b6;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 5px 5px 5px 8px;
+	margin-bottom: 2px;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #999999;
+	font-family: Arial, Helvetica, sans-serif;
+}
+/*
+.step-ok {
+	color: #B34242;
+	background: #DDABAB;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 5px 5px 5px 8px;
+	margin-bottom: 2px;
+	border-top: 1px solid #999999;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #999999;
+	font-family: Arial, Helvetica, sans-serif;
+}
+*/
+
+.step-off {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #B9B4AA;
+	font-weight: bold;
+	padding: 5px 5px 5px 8px;
+	margin-bottom: 2px;
+	border-top: 1px solid #666666;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #666666;
+	background-color: #EEEDE8;
+}
+
+#right {
+  float: right;
+  width: 555px !important;
+  width: 545px;
+  border-left: 1px solid #B9B4AA;
+  padding-left: 10px;
+
+}
+
+#break {
+	height: 20px;
+}
+
+.licensetext {
+  text-align: left;
+}
+
+.license {
+  padding: 0px;
+  width: 530px;
+  height: 300px;
+}
+
+.license-form {
+  float: left;
+}
+
+.install {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3em;
+	margin-bottom: 3em;
+	padding: 10px;
+	width: 750px;
+	background: #f7f6f2;
+	border-top: 1px solid #b9b4aa;
+	border-right: 1px solid #b9b4aa;
+	border-bottom: 2px solid #b9b4aa;
+	border-left: 1px solid #b9b4aa;
+}
+	
+.install h1 {
+	font-size: 12pt;
+	font-weight: bold;
+	color: #BA5252;
+	padding: 5px 10px 4px 0px;
+	text-align: left;
+	border-bottom: 2px solid #DBD8CE;
+	margin-bottom: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+	margin-top: 20px;
+
+}
+
+.install-form {
+  position: relative;
+	text-align: left;
+	float: right;
+	width: 69%;
+}
+
+.install-text {
+  position: relative;
+	text-align: left;
+	width: 30%;
+	float: left;
+}
+
+.form-block {
+	border: 1px solid #DBD8CE;
+	background: #eeede8;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+
+.left {
+  position: relative;
+	text-align: left;
+	float: left;
+	width: 50%;
+}
+
+.right {
+  position: relative;
+	text-align: left;
+	float: right;
+	width: 50%;
+}
+
+.far-right {
+  position: relative;
+	text-align: right;
+	float: right;
+}
+
+.far-left {
+  position: relative; 
+	text-align: left;
+	float: left;
+}
+
+.clr {
+    clear:both;
+    }
+
+.ctr {
+	text-align: center;
+}
+
+.button {
+	background: #B34242;
+	color : #FFFFFF;
+	font-weight : bold;
+	font-size : 11px;
+	padding: 4px;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	border-left: 1px solid #FFFFFF;
+}
+
+table.content {
+	width: 95%;
+}
+
+table.content td {
+	color : #333333;
+	font-size: 11px;
+	width: 50%;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #B9B4AA;
+	padding-top: 3px;
+}
+
+table.content2 {
+	width: 90%;
+}
+
+table.content2 td {
+	color : #333333;
+	font-size: 11px;
+}
+
+.toggle {
+	font-weight: bold;
+}
+
+
+/*  old stuff */
+
+
+a {
+	color : #9D1C1C;
+	text-decoration : underline;
+	font-weight: bold;
+}
+a:hover {
+	color : #FF0000;
+	text-decoration : underline;
+}
+a:active {
+	color : #FF0000;
+	text-decoration : underline;
+}
+
+.inputbox {
+
+	color: blue;
+	font-family: Arial, Helvetica, sans-serif;
+	z-index: -3;
+	font-size: 11px;
+}
+
+.small {
+	color : #333;
+	font-size : 10px;
+}
+
+.error {
+	color : #cc0000;
+	font-size : 12px;
+	font-weight : bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+select.options, input.options {
+	font-size: 8pt;
+	border: 1px solid #999;
+}
+
+form {
+	margin: 0px 0px 0px 0px;
+}
+
+
+.dottedline {
+	border-bottom: 1px solid #333;
+}
+
+.installheader {
+	color : #FFF;
+	font-size : 24px;
+}
+
+textarea {
+	color : #0000dd;
+	font-family : Arial;
+	font-size : 11px;
+	border: 1px;
+}
+#header .version {
+	float: right;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-style: italic;
+	margin-top: 13px;
+	margin-right: 10px;
+}
+.clear-chusmy {
+	clear: both;
+	font-size: 1px;
+	height: 1px;
+}
+#knomos .logo {
+	float: left;
+}
