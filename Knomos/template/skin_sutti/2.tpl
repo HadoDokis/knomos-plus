@@ -31,8 +31,6 @@
 <body%[BODY_ONCLOSE]%>
 %[JS_SHORTCUT]% %[BODY_ONLOAD]%
 
-<a href="javascript: alert('test', 'prova titolo');">prompt alert</a>
-
 <input style="display: none" id="TxIpUser" name="TxIpTelUser" size="39"
 	maxlength="39" value='%[IP_USER]%'>
 
@@ -41,9 +39,7 @@
 <div id="header">
 <table border="0" cellpadding="0" cellspacing="0" id="header_table">
 	<tr valign="middle">
-		<td class="header-sinistra"><img
-			src="%[IMAGE_GPATH]%header_sinistra.gif" alt="Home" width="150"
-			height="25" border="0"></a></td>
+		<td class="header-sinistra"><div class="logo-small"></div></a></td>
 		<td class="header-logo"><img src="%[IMAGE_GPATH]%header_logo.gif"
 			width="89" height="25"></td>
 		<td width="35%" nowrap class="header-td-03">

@@ -933,3 +933,17 @@ ul.ui-autocomplete {
 	overflow: auto;
 	font-size: 0.9em;
 }
+.logo {
+	background-image: url("../images/logo.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 268px;
+	height: 55px;
+}
+.logo-small {
+	background-image: url("../images/logo-small.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 206px;
+	height: 45px;
+}
