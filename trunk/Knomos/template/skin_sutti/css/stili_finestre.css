@@ -1,0 +1,112 @@
+/*FINESTRA 01*/
+.finestra-01-div {
+	border-top: 2px solid #2e6e9e;
+	border-right: 2px solid #2e6e9e;
+	border-bottom: 2px solid #2e6e9e;
+	border-left: 2px solid #2e6e9e;
+	margin: 0px;
+}
+.finestra-resize-link {
+	cursor: se-resize;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+}
+.finestra-01-tit {
+	color: #FFFFFF;
+	font-weight: bold;
+	padding-left: 5px;
+}
+.finestra-01-pulsanti {
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 0px;
+	margin: 0px;
+}
+.finestra-01-inf {
+	background-color: #72abd6;
+	color: #FFFFFF;
+	height: 1%;
+}
+.finestra-01-sup {
+	background-color: #72abd6;
+	height: 22px;
+}
+.finestra-01-sup-over {
+	background-color: #DE2D2D;
+	background-image:  url("/template/skin_sutti/images/finestre_img/finetre_01_sfondo_sup_over.gif");
+	background-repeat: repeat-x;
+	height: 22px;
+}
+.finestra-01-middle {
+	background-color: #edf3f3;
+	padding: 0;
+	height: 99%;
+}
+TD.finestra-01-pulsanti IMG {
+	padding: 0px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	margin-right: 2px;
+	margin-left: 2px;
+}
+
+/*FINESTRA 02*/
+.finestra-02-div {
+	border-top: 1px solid #BEB697;
+	border-right: 1px solid #BEB697;
+	border-bottom: 2px solid #333333;
+	border-left: 1px solid #BEB697;
+	/*centrada*/
+	position:absolute; 
+	top:50%; 
+	left:50%; 
+	width:500px; 
+	height:300px; 
+	margin-left:-250px; 
+	margin-top:-150px; 
+	/*centrada*/	
+}
+.finestra-02-tit {
+	cursor: move;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding-left: 5px;
+}
+.finestra-02-pulsanti {
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 0px;
+	margin: 0px;
+}
+.finestra-02-inf {
+	background-color: #BEB697;
+	color: #FFFFFF;
+	height: 1%;
+	background-image:  url(/template/skin_sutti/images/finestre_img/finetre_02_sfondo_inf.gif);
+	background-repeat: repeat-x;
+}
+.finestra-02-sup {
+	background-color: #BEB697;
+	background-image:  url(/template/skin_sutti/images/finestre_img/finetre_02_sfondo_sup.gif);
+	background-repeat: repeat-x;
+	height: 22px;
+}
+.finestra-02-sup-over {
+	background-color: #A29456;
+	background-image:  url(/template/skin_sutti/images/finestre_img/finetre_02_sfondo_sup_over.gif);
+	background-repeat: repeat-x;
+	height: 22px;
+}
+.finestra-02-middle {
+	background-color: #F5F2EA;
+	padding: 10px;
+	height: 94%;
+}
+TD.finestra-02-pulsanti IMG {
+	padding: 0px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	margin-right: 2px;
+	margin-left: 2px;
+}

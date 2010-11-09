@@ -1,0 +1,599 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+ <head>
+<link href="../../../template/skin_sutti/css/stili_sutti_main.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/javascript">
+
+
+
+function Reset(){document.location.reload();}
+
+
+function Calcola(){
+//vAA1=document.getElementById("AA1");
+vChkDim1=document.getElementById("ChkDim1");
+vChkDim2=document.getElementById("ChkDim2");
+vChkDim3=document.getElementById("ChkDim3");
+vChkDim4=document.getElementById("ChkDim4");
+if(vChkDim1.checked==true){var SeDim1=1; }else{var SeDim1=0; }
+if(vChkDim2.checked==true){var SeDim2=1; }else{var SeDim2=0; }
+if(vChkDim3.checked==true){var SeDim3=1; }else{var SeDim3=0; }
+if(vChkDim4.checked==true){var SeDim4=1; }else{var SeDim4=0; }
+vNM1=document.getElementById("NM1").value;
+vDN1=document.getElementById("DN1").value;
+vNM2=document.getElementById("NM2").value;
+vDN2=document.getElementById("DN2").value;
+vNM3=document.getElementById("NM3").value;
+vDN3=document.getElementById("DN3").value;
+vNM4=document.getElementById("NM4").value;
+vDN4=document.getElementById("DN4").value;
+//alert(vNM1);alert(vDN1);
+vPBA=(document.getElementById("AnniPB").value)*360;
+vPBM=(document.getElementById("MesiPB").value)*30;
+vPBG=(document.getElementById("GiorniPB").value);
+vPPB=(document.getElementById("PPB").value);
+//alert(vPBA),alert(vPBM);alert(vPBG);
+vPB = Number(vPBA) + Number(vPBM) + Number(vPBG);
+vAA81=(document.getElementById("Anni81").value)*360;
+vMM81=(document.getElementById("Mesi81").value)*30;
+vGG81=(document.getElementById("Giorni81").value);
+vAum81=Number(vAA81)+Number(vMM81)+Number(vGG81);
+vPP81=(document.getElementById("PP81").value);
+vDIETIM=(document.getElementById("DIETIM").value);
+//alert(vPP81)
+
+
+	if(SeDim1==1)
+	{
+	vTerzo1=(vPB*Number(vNM1))/Number(vDN1);
+	vParz=vPB-vTerzo1
+	//anni
+	aParz=parseInt(vParz/360);
+	//mesi
+	DaTogliereAnni=360*parseInt(aParz)
+	mParz=parseInt((vParz-DaTogliereAnni)/30);
+	if(mParz>=12) {aParz=aParz+1;mParz=mParz-12} 
+	//giorni
+	gParz=parseInt(vParz-(aParz*360)-(mParz*30));
+	if(gParz>=30) {mParz=mParz+1;gParz=gParz-30}
+	if(gParz<0){gParz=0};if(mParz<0){mParz=0};if(aParz<0){aParz=0};
+	//Pena pecuniaria
+	vPPterzo=(vPPB/3);
+	vPPP=vPPB-vPPterzo;
+	//scrive
+	document.getElementById("PP1").value=vPPP;
+	document.getElementById("AA1").value=aParz;
+	document.getElementById("MM1").value=mParz;
+	document.getElementById("GG1").value=gParz;
+
+		if(SeDim2==1)
+		{
+		vTerzo2=(vParz*Number(vNM2))/Number(vDN2);
+		vParz=vParz-vTerzo2
+		//anni
+		aParz=parseInt(vParz/360);
+		//mesi
+		DaTogliereAnni=360*parseInt(aParz)
+		mParz=parseInt((vParz-DaTogliereAnni)/30);
+		if(mParz>=12) {aParz=aParz+1;mParz=mParz-12} 
+		//giorni
+		gParz=parseInt(vParz-(aParz*360)-(mParz*30));
+		if(gParz>=30) {mParz=mParz+1;gParz=gParz-30}
+		if(gParz<0){gParz=0};if(mParz<0){mParz=0};if(aParz<0){aParz=0};
+		//Pena pecuniaria
+		vPPterzo=(vPPP/3);
+		vPPP=vPPP-vPPterzo;
+		//scrive
+		document.getElementById("PP2").value=vPPP;
+		document.getElementById("AA2").value=aParz
+		document.getElementById("MM2").value=mParz
+		document.getElementById("GG2").value=gParz
+		}
+			if(SeDim3==1)
+			{
+			vTerzo3=(vParz*Number(vNM3))/Number(vDN3);
+			vParz=vParz-vTerzo3
+			//anni
+			aParz=parseInt(vParz/360);
+			//mesi
+			DaTogliereAnni=360*parseInt(aParz)
+			mParz=parseInt((vParz-DaTogliereAnni)/30);
+			if(mParz>=12) {aParz=aParz+1;mParz=mParz-12} 
+			//giorni
+			gParz=parseInt(vParz-(aParz*360)-(mParz*30));
+			if(gParz>=30) {mParz=mParz+1;gParz=gParz-30}
+			if(gParz<0){gParz=0};if(mParz<0){mParz=0};if(aParz<0){aParz=0};
+			//Pena pecuniaria
+			vPPterzo=(vPPP/3);
+			vPPP=vPPP-vPPterzo;
+			//scrive
+			document.getElementById("PP3").value=vPPP;
+			document.getElementById("AA3").value=aParz
+			document.getElementById("MM3").value=mParz
+			document.getElementById("GG3").value=gParz
+			}
+				if(SeDim4==1)
+				{
+				vTerzo4=(vParz*Number(vNM4))/Number(vDN4);
+				vParz=vParz-vTerzo4
+				//anni
+				aParz=parseInt(vParz/360);
+				//mesi
+				DaTogliereAnni=360*parseInt(aParz)
+				mParz=parseInt((vParz-DaTogliereAnni)/30);
+				if(mParz>=12) {aParz=aParz+1;mParz=mParz-12} 
+				//giorni
+				gParz=parseInt(vParz-(aParz*360)-(mParz*30));
+				if(gParz>=30) {mParz=mParz+1;gParz=gParz-30}
+					if(gParz<0){gParz=0};if(mParz<0){mParz=0};if(aParz<0){aParz=0};
+				//Pena pecuniaria
+				vPPterzo=(vPPP/3);
+				vPPP=vPPP-vPPterzo;
+				//scrive
+				document.getElementById("PP4").value=vPPP;
+				//document.getElementById("AA3").value=aParz
+				//document.getElementById("MM3").value=mParz
+				//document.getElementById("GG3").value=gParz
+				document.getElementById("AA4").value=aParz
+				document.getElementById("MM4").value=mParz
+				document.getElementById("GG4").value=gParz
+				}
+	}
+	else
+	{vParz=vPB;vPPP=vPPB}
+	//alert(vPB);alert(vParz);
+	//alert(vPPB);alert(vPPP);
+
+	//Parziale
+	vParzTot=vParz;
+	//vParzTot=vParz+vAum81;
+	//anni
+	aParz=parseInt(vParzTot/360);
+	//mesi
+	DaTogliereAnni=360*parseInt(aParz)
+	mParz=parseInt((vParzTot-DaTogliereAnni)/30);
+	if(mParz>=12) {aParz=aParz+1;mParz=mParz-12} 
+	//giorni
+	gParz=parseInt(vParzTot-(aParz*360)-(mParz*30));
+	if(gParz>=30) {mParz=mParz+1;gParz=gParz-30}
+	if(gParz<0){gParz=0};if(mParz<0){mParz=0};if(aParz<0){aParz=0};
+	//Pena pecuniaria
+	//vPPP=vPPP;//vPPP=vPPP+vPP81;
+	//vPPterzo=(vPPP/3);
+	//vPPP=vPPP-vPPterzo;
+	//scrive
+	document.getElementById("PPTOT1").value=vPPP;
+	document.getElementById("AATOT1").value=aParz
+	document.getElementById("MMTOT1").value=mParz
+	document.getElementById("GGTOT1").value=gParz
+
+	//Continuazione
+	vTotale=vParz+vAum81;
+	//anni
+	aParz=parseInt(vTotale/360);
+	//mesi
+	DaTogliereAnni=360*parseInt(aParz)
+	mParz=parseInt((vTotale-DaTogliereAnni)/30);
+	if(mParz>=12) {aParz=aParz+1;mParz=mParz-12} 
+	//giorni
+	gParz=parseInt(vTotale-(aParz*360)-(mParz*30));
+	if(gParz>=30) {mParz=mParz+1;gParz=gParz-30}
+	if(gParz<0){gParz=0};if(mParz<0){mParz=0};if(aParz<0){aParz=0};
+	//Pena pecuniaria
+	//if (vPP81>0){
+	vPPP=Number(vPPP)+Number(vPP81);
+	//vPPterzo=(vPPP/3);
+	//vPPP=vPPP-vPPterzo;//}
+	//scrive
+	document.getElementById("PPTOT2").value=vPPP;
+	document.getElementById("AATOT2").value=aParz
+	document.getElementById("MMTOT2").value=mParz
+	document.getElementById("GGTOT2").value=gParz
+
+	//---PENA FINALE
+	//alert(vParzTot)
+	vTerzo444=vTotale/3;
+	vFinale=vTotale-vTerzo444;
+	//anni
+	aParz=parseInt(vFinale/360);
+	//mesi
+	DaTogliereAnni=360*aParz
+	mParz=parseInt((vFinale-DaTogliereAnni)/30);
+	if(mParz>=12) {aParz=aParz+1;mParz=mParz-12} 
+	//giorni
+	gParz=parseInt(vFinale-(aParz*360)-(mParz*30));
+	if(gParz>=30) {mParz=mParz+1;gParz=gParz-30}
+	//Valori negativi
+	if(gParz<0){gParz=0};if(mParz<0){mParz=0};if(aParz<0){aParz=0};
+
+	//Pena pecuniaria
+	vPPterzo=(vPPP/3);
+	vPPT=Number(vPPP)-Number(vPPterzo);
+	//scrive
+	document.getElementById("PPTOT").value=vPPT;
+	document.getElementById("AATOT").value=aParz
+	document.getElementById("MMTOT").value=mParz
+	document.getElementById("GGTOT").value=gParz
+
+	//CONVERSIONE
+
+
+	var ggTotali=(aParz*365)+(mParz*30)+Number(gParz);
+		if(ggTotali<=180)
+		{
+		var pdConv=Number(ggTotali)*vDIETIM;
+		var TotPPConv=Number(pdConv)+Number(vPPT)
+		document.getElementById("SESINO").value="consentita";
+		document.getElementById("GGCONV").value=ggTotali
+		document.getElementById("PPCONV").value=pdConv
+		document.getElementById("PPTOT3").value=vPPT
+		document.getElementById("TOTCONV").value=TotPPConv
+		}
+		else
+		{document.getElementById("SESINO").value="non consentita";document.getElementById("GGCONV").value=ggTotali; document.getElementById("PPCONV").value=0;	document.getElementById("PPTOT3").value=0;	document.getElementById("TOTCONV").value=0;
+		}
+
+}
+
+function DataConversione(){
+ck=document.getElementById("ChkConv");
+if (ck.checked==true){document.getElementById("DIETIM").value="38.00";} else {document.getElementById("DIETIM").value="250.00";}
+
+}
+
+</script>
+</head>
+
+<body>
+<div class="rinvio" name="DivCalc444">
+<table width="100%"  border="0" cellspacing="1" name="Table444">
+  <tr  name="DivTitolo" id="IT">
+  <th colspan="2" width="100%" align="left"><span class="rinvio-tit">
+  Applicazione della pena su richiesta (Art. 444 c.p.p.)</span>
+  </th>
+  </tr>
+
+
+	<tr >
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+<span class="pratica-resalt-01">
+Pena base: </span> 
+	</td>
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+		Anni
+	      <select id="AnniPB" size="1" class=""  onFocus="this.className='campo-focus-02'" onBlur="this.className='null'">
+	      <option selected="selected" value="0">0</option>
+	      <option value="1">1</option>
+	      <option value="2">2</option>
+	      <option value="3">3</option>
+	      <option value="4">4</option>
+	      <option value="5">5</option>
+	      <option value="6">6</option>
+	      <option value="7">7</option>
+	      <option value="8">8</option>
+	      <option value="9">9</option>
+	      <option value="10">10</option>
+	      <option value="11">11</option>
+	      <option value="12">12</option>
+	      <option value="13">13</option>
+	      <option value="14">14</option>
+	      <option value="15">15</option>
+	      <option value="16">16</option>
+	      <option value="17">17</option>
+	      <option value="18">18</option>
+	      <option value="19">19</option>
+	      <option value="20">20</option>
+	      <option value="21">21</option>
+	      <option value="22">22</option>
+	      <option value="23">23</option>
+	      <option value="24">24</option>
+	      <option value="25">25</option>
+	      <option value="26">26</option>
+	      <option value="27">27</option>
+	      <option value="28">28</option>
+	      <option value="29">29</option>
+	      <option value="30">30</option>
+	      </select>
+
+		Mesi
+	      <select id="MesiPB" size="1" class=""  onFocus="this.className='campo-focus-02'" onBlur="this.className='null'">
+	      <option selected="selected" value="0">0</option>
+	      <option value="1">1</option>
+	      <option value="2">2</option>
+	      <option value="3">3</option>
+	      <option value="4">4</option>
+	      <option value="5">5</option>
+	      <option value="6">6</option>
+	      <option value="7">7</option>
+	      <option value="8">8</option>
+	      <option value="9">9</option>
+	      <option value="10">10</option>
+	      <option value="11">11</option>
+	      </select>
+		Giorni
+	      <select id="GiorniPB" size="1" class=""  onFocus="this.className='campo-focus-02'" onBlur="this.className='null'">
+	      <option selected="selected" value="0">0</option>
+	      <option value="1">1</option>
+	      <option value="2">2</option>
+	      <option value="3">3</option>
+	      <option value="4">4</option>
+	      <option value="5">5</option>
+	      <option value="6">6</option>
+	      <option value="7">7</option>
+	      <option value="8">8</option>
+	      <option value="9">9</option>
+	      <option value="10">10</option>
+	      <option value="11">11</option>
+	      <option value="12">12</option>
+	      <option value="13">13</option>
+	      <option value="14">14</option>
+	      <option value="15">15</option>
+	      <option value="16">16</option>
+	      <option value="17">17</option>
+	      <option value="18">18</option>
+	      <option value="19">19</option>
+	      <option value="20">20</option>
+	      <option value="21">21</option>
+	      <option value="22">22</option>
+	      <option value="23">23</option>
+	      <option value="24">24</option>
+	      <option value="25">25</option>
+	      <option value="26">26</option>
+	      <option value="27">27</option>
+	      <option value="28">28</option>
+	      <option value="29">29</option>
+
+	      </select>
+Euro: <input type="text" id="PPB" size="21" value="0" onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+	</td>
+	</tr>
+
+
+	<tr >
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+<input name "CP" id="ChkDim1" type="checkbox"   value="" > Diminuzione (
+<input type="text" id="NM1" size="2" value="1" onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+/ <input type="text" id="DN1" size="2" value="3" onFocus="this.className='campo-focus-02'" onBlur="this.className='null'">
+) 
+	</td>
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+Anni <input type="text" id="AA1" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Mesi <input type="text" id="MM1" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Giorni <input type="text" id="GG1" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Euro: <input type="text" id="PP1" size="21" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+
+	</td>
+	</tr>
+	<tr >
+
+
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+<input name "CP" id="ChkDim2" type="checkbox"   value="" > Diminuzione (
+<input type="text" id="NM2" size="2" value="1" onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+/ <input type="text" id="DN2" size="2" value="3" onFocus="this.className='campo-focus-02'" onBlur="this.className='null'">
+) 
+	</td>
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+Anni <input type="text" id="AA2" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Mesi <input type="text" id="MM2" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Giorni <input type="text" id="GG2" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Euro: <input type="text" id="PP2" size="21" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+
+	</td>
+	</tr>
+
+	<tr >
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+<input name "CP" id="ChkDim3" type="checkbox"   value="" > Diminuzione (
+<input type="text" id="NM3" size="2" value="1" onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+/ <input type="text" id="DN3" size="2" value="3" onFocus="this.className='campo-focus-02'" onBlur="this.className='null'">
+) 
+	</td>
+
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+Anni <input type="text" id="AA3" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Mesi <input type="text" id="MM3" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Giorni <input type="text" id="GG3" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Euro: <input type="text" id="PP3" size="21" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+
+	</td>
+	</tr>
+
+	<tr >
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+<input name "CP" id="ChkDim4" type="checkbox"   value="" > Diminuzione (
+<input type="text" id="NM4" size="2" value="1" onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+/ <input type="text" id="DN4" size="2" value="3" onFocus="this.className='campo-focus-02'" onBlur="this.className='null'">
+) 
+	</td>
+
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+Anni <input type="text" id="AA4" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Mesi <input type="text" id="MM4" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Giorni <input type="text" id="GG4" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Euro: <input type="text" id="PP4" size="21" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+
+	</td>
+	</tr>
+
+	<tr >
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+<span class="pratica-resalt-01">Parziale: </span> 
+	</td>
+
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+Anni <input type="text" id="AATOT1" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Mesi <input type="text" id="MMTOT1" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Giorni <input type="text" id="GGTOT1" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Euro: <input type="text" id="PPTOT1" size="21" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+
+	</td>
+	</tr>
+	<tr >
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+<strong">Aumento per la continuazione: </strong> <BR/><BR/>
+		Anni
+	      <select id="Anni81" size="1" class=""  onFocus="this.className='campo-focus-02'" onBlur="this.className='null'">
+	      <option selected="selected" value="0">0</option>
+	      <option value="1">1</option>
+	      <option value="2">2</option>
+	      <option value="3">3</option>
+	      <option value="4">4</option>
+	      <option value="5">5</option>
+	      <option value="6">6</option>
+	      <option value="7">7</option>
+	      <option value="8">8</option>
+	      <option value="9">9</option>
+	      <option value="10">10</option>
+	      <option value="11">11</option>
+	      <option value="12">12</option>
+	      <option value="13">13</option>
+	      <option value="14">14</option>
+	      <option value="15">15</option>
+	      <option value="16">16</option>
+	      <option value="17">17</option>
+	      <option value="18">18</option>
+	      <option value="19">19</option>
+	      <option value="20">20</option>
+	      <option value="21">21</option>
+	      <option value="22">22</option>
+	      <option value="23">23</option>
+	      <option value="24">24</option>
+	      <option value="25">25</option>
+	      <option value="26">26</option>
+	      <option value="27">27</option>
+	      <option value="28">28</option>
+	      <option value="29">29</option>
+	      <option value="30">30</option>
+	      </select>
+
+		Mesi
+	      <select id="Mesi81" size="1" class=""  onFocus="this.className='campo-focus-02'" onBlur="this.className='null'">
+	      <option selected="selected" value="0">0</option>
+	      <option value="1">1</option>
+	      <option value="2">2</option>
+	      <option value="3">3</option>
+	      <option value="4">4</option>
+	      <option value="5">5</option>
+	      <option value="6">6</option>
+	      <option value="7">7</option>
+	      <option value="8">8</option>
+	      <option value="9">9</option>
+	      <option value="10">10</option>
+	      <option value="11">11</option>
+	      </select>
+		Giorni
+	      <select id="Giorni81" size="1" class=""  onFocus="this.className='campo-focus-02'" onBlur="this.className='null'">
+	      <option selected="selected" value="0">0</option>
+	      <option value="1">1</option>
+	      <option value="2">2</option>
+	      <option value="3">3</option>
+	      <option value="4">4</option>
+	      <option value="5">5</option>
+	      <option value="6">6</option>
+	      <option value="7">7</option>
+	      <option value="8">8</option>
+	      <option value="9">9</option>
+	      <option value="10">10</option>
+	      <option value="11">11</option>
+	      <option value="12">12</option>
+	      <option value="13">13</option>
+	      <option value="14">14</option>
+	      <option value="15">15</option>
+	      <option value="16">16</option>
+	      <option value="17">17</option>
+	      <option value="18">18</option>
+	      <option value="19">19</option>
+	      <option value="20">20</option>
+	      <option value="21">21</option>
+	      <option value="22">22</option>
+	      <option value="23">23</option>
+	      <option value="24">24</option>
+	      <option value="25">25</option>
+	      <option value="26">26</option>
+	      <option value="27">27</option>
+	      <option value="28">28</option>
+	      <option value="29">29</option>
+
+	      </select>
+Euro <input type="text" id="PP81" size="21" value="0" onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+
+	</td>
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+Anni <input type="text" id="AATOT2" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Mesi <input type="text" id="MMTOT2" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Giorni <input type="text" id="GGTOT2" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'">
+ Euro: <input type="text" id="PPTOT2" size="21" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+	</td>
+	</tr>
+
+	<tr >
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+<span class="pratica-resalt-01">Pena finale: </span> 
+	</td>
+
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+Anni <input type="text" id="AATOT" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Mesi <input type="text" id="MMTOT" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Giorni <input type="text" id="GGTOT" size="2" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Euro: <input type="text" id="PPTOT" size="21" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+
+	</td>
+	</tr>
+
+
+<tr>
+<td width="100%" colspan="2" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<span class="pratica-resalt-01">Conversione in pena pecuniaria: </span> 
+<input type="text" id="SESINO" size="11" value="" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+<input name "CP" id="ChkConv" type="checkbox" value="" onchange="javascript:DataConversione()" > Fatto occorso prima dell'8-8-2009
+
+
+</td>
+</tr>
+<tr>
+<td width="100%" colspan="2" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+Giorni <input type="text" id="GGCONV" size="5" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+Dietim <input type="text" id="DIETIM" size="5" value="250.00" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+
+Conversione: ( <input type="text" id="PPCONV" size="15" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
++ <input type="text" id="PPTOT3" size="15" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+) <span class="pratica-resalt-01">Totale: </span>  <input type="text" id="TOTCONV" size="15" value="0" readonly="readonly onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> 
+
+</td>
+</tr>
+<tr>
+<td width="100%" colspan="2" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<input class="bot-submit" type="button" id="PulsCalc" value="Calcola" onclick="javascript:Calcola()"> 
+<input class="bot-submit" type="button"  id="PulsReset" value="Cancella" onclick="javascript:Reset()"> 
+</td>
+</tr>
+
+
+
+
+</table>
+
+
+</div>
+	<p align="center">
+		 
+		<input  class="bot-submit" value="Scorporo IVA" name="test1" onclick=parent.location.href="../../../plus/calcolatrici/pages/calcolatrici.php?TipoUtCal=2" type="button"> | 
+		<input  class="bot-submit" value="Interessi" name="test1" onclick=parent.location.href="../../../plus/calcolatrici/pages/calcolatrici.php?TipoUtCal=4" type="button"> | 
+		<input  class="bot-submit" value="Interessi legali" name="test1" onclick=parent.location.href="../../../plus/calcolatrici/pages/calcolatrici.php?TipoUtCal=5" type="button"> | 
+		<input  class="bot-submit" value="Interessi moratori" name="test1" onclick=parent.location.href="../../../plus/calcolatrici/pages/calcolatrici.php?TipoUtCal=6" type="button">  
+	</p>
+	<p align="center">
+		<input  class="bot-submit" value="Patteggiamento" name="test1" onclick=parent.parent.location.href="../../../plus/calcolatrici/pages/calcolatrici.php?TipoUtCal=1" type="button"> |
+		<input  class="bot-submit" value="Termini Impugnazioni penali" name="test1" onclick=parent.location.href="../../../plus/calcolatrici/pages/calcolatrici.php?TipoUtCal=7&modalita=CalcImPen" type="button"> | 
+ 		<input  class="bot-submit" value="Termini processuali" name="test1" onclick=parent.location.href="../../../plus/calcolatrici/pages/calcolatrici.php?TipoUtCal=8" type="button"> |
+		<input  class="bot-submit" value="Codice fiscale" name="test1" onclick=parent.location.href="../../../plus/calcolatrici/pages/calcolatrici.php?TipoUtCal=3" type="button">   
+	</p>
+</body>
+</html>
+
+
+
+
+

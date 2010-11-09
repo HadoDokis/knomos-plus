@@ -1,0 +1,89 @@
+DIV#content_login {
+	background-color: #FFFFFF;
+	margin: 50px auto 0px;
+	padding: 4px;
+	width: 730px;
+	background-image: url(../images/login_sfondo.gif);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+DIV#ombra_inf_login {
+	background-image: url(../images/ombra_inf.gif);
+	background-repeat: repeat-x;
+	margin: 0px auto;
+	padding: 4px;
+	color: #000000;
+	text-align: center;
+	width: 730px;
+}
+FORM#form_login {
+	padding: 6px;
+	width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+DIV#div_login {
+	width: 100%;
+	padding: 6px;
+	margin: 0px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #E5E2DA;
+	border-bottom-color: #B9B4A2;
+	background-color: #EEEDE8;
+	/*background-color: #DEDDD8;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #8B8274;
+	border-bottom-color: #8B8274;
+	*/
+}
+.login-input {
+	border-top: 1px solid #B9B4A2;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	border-left: 1px solid #B9B4A2;
+	font-size: 8pt;
+	font-weight: bold;
+	width: 100%;
+}
+.login-input-focus {
+	color: #993300;
+	background-color: #FFF2CD;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #000000;
+	font-size: 8pt;
+	font-weight: bold;
+	width: 100%;
+}
+.login-messagio {
+	width: 100%;
+	padding: 6px;
+	margin: 0px;
+	background-color: #E4E1D7;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #B9B4A2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+	color: #FF0000;
+	font-weight: bold;
+	font-size: 7pt;
+}

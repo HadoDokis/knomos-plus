@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+ <head>
+<link href="/template/skin_sutti/css/stili_sutti_main.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/javascript">
+
+function Calcola(){
+// -----------   verifica dati inseriti -------------
+//	1) verifica che sia stato inserito qualcosa nella casella importo
+SeInseritoNo = document.getElementById("importo")//.value=""
+if(SeInseritoNo.value==""){alert("Inserire la cifra da scorporare.");return};
+//	2) verifica che il dato sia numerico o POSITIVO
+SeInseritoNull = document.getElementById("importo")
+//alert(SeImportoNull.value>0)
+if(SeInseritoNull.value>0){}else{alert("Importo: Attenzione! Cifra non corretta.");document.getElementById("importo").value="";return};
+//	3) verifica che sia stato inserito qualcosa nella casella anticip
+SeInseritoNo2 = document.getElementById("anticip")//.value=""
+if(SeInseritoNo2.value==""){alert("Inserire le spese non imponibili.");document.getElementById("anticip").value=0; return};
+//	4) verifica che il dato sia numerico o POSITIVO
+SeInseritoNull2 = document.getElementById("anticip")
+//alert(SeInseritoNull.value>0)
+if(SeInseritoNull2.value>=0 ){}else{alert("Spese non imponibili: Attenzione! Cifra non corretta.");document.getElementById("importo").value="";document.getElementById("anticip").value=0;return};
+// -----------   fine verifica dati inseriti -------------
+
+// -------  IMPOSTAZIONE PARAMETRI --------------
+var ParScorporoRA=Number("0.1909")
+var ParScorporoIVA=Number("1.20")
+var ParIVA=Number("0.20")
+var ParRA=Number("0.20")
+var ParSG=Number("0.125")
+//Se CPA 4%
+if (ChkCPA4.checked==true) {var ValCPA=ChkCPA4.value; var ParCPA=Number("0.04");}
+else {var ValCPA=ChkCPA2.value; var ParCPA=Number("0.02");}
+// ----  FINE IMPOSTAZIONE PARAMETRI -------------
+
+//Prende i valori dalle caselle di testo
+Importo=document.getElementById("importo")
+SpNON=document.getElementById("anticip")
+IncassoNetto=Number(Importo.value)-Number(SpNON.value)
+
+//Prende i valori dalle check
+ChkCPA2=document.getElementById("ChkCPA2")
+ChkCPA4=document.getElementById("ChkCPA4")
+ChkSG=document.getElementById("ChkSG")
+ChkRA=document.getElementById("ChkRA")
+
+//ESEGUE I CALCOLI Con ritenuta
+if (ChkRA.checked==true)
+{
+var TotaleParcella= IncassoNetto+(IncassoNetto*ParScorporoRA);
+//Calcola imponibile IVA
+var ImponIVA=(TotaleParcella)/ParScorporoIVA;
+var IVA=ImponIVA*ParIVA;
+//Calcola imponibile CPA
+var ImponCPA=ImponIVA/ValCPA;
+var CPA=ImponCPA*ParCPA;
+//Calcola la Ritenuta d'acconto
+var RA = (ImponCPA)*ParRA; 
+}
+//ESEGUE I CALCOLI Senza Ritenuta
+else
+{
+var RA = 0; 
+var TotaleParcella= IncassoNetto;
+//Calcola imponibile IVA
+var ImponIVA=(TotaleParcella)/ParScorporoIVA;
+var IVA=ImponIVA*ParIVA
+//Calcola imponibile CPA
+var ImponCPA=ImponIVA/ValCPA
+var CPA=ImponCPA*ParCPA
+}
+
+//Se scorporo spese Generali
+if (ChkSG.checked==true){var ImportoDaNotulare=ImponCPA/(ChkSG.value); var SG = ImportoDaNotulare*ParSG} else {ImportoDaNotulare=ImponCPA; var SG = 0}
+
+
+//Scrive nelle caselle di riepilogo
+
+document.getElementById("Tximpcpa").value=ImponCPA.toFixed(2)
+document.getElementById("Txcpa").value=CPA.toFixed(2)
+document.getElementById("Tximpiva").value=ImponIVA.toFixed(2)
+document.getElementById("Txiva").value=IVA.toFixed(2)
+document.getElementById("Txtotnot").value=ImportoDaNotulare.toFixed(2)
+document.getElementById("Txsg").value=SG.toFixed(2)
+document.getElementById("Txra").value=RA.toFixed(2)
+document.getElementById("Txtotali").value=(ImportoDaNotulare+SG+CPA+IVA+Number(SpNON.value)-RA).toFixed(2)
+
+}
+
+function Reset(){
+//alert("qui")
+document.getElementById("importo").value=""
+document.getElementById("anticip").value=0
+//Azzera le caselle di riepilogo
+document.getElementById("Tximpcpa").value="0"
+document.getElementById("Txcpa").value="0"
+document.getElementById("Tximpiva").value="0"
+document.getElementById("Txiva").value="0"
+document.getElementById("Txtotnot").value="0"
+document.getElementById("Txsg").value="0"
+document.getElementById("Txra").value="0"
+document.getElementById("Txtotali").value="0"
+
+}
+
+</script>
+</head>
+
+<body>
+<div class="rinvio" name="DivCalcTerminiProcessuali">
+<table width="100%"  border="0" cellspacing="1" name="TableScIVA">
+  <tr  name="DivTitolo" id="IT">
+  <th colspan="2" width="100%" align="left"><span class="rinvio-tit">
+  Scorporo IVA</span>
+  </th>
+  </tr>
+
+
+	<tr >
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+<span class="pratica-resalt-01">
+Importo da scorporare: </span> 
+	</td>
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<input  type="text" id="importo" size="12" value="" onFocus="this.className='campo-focus-02'" onBlur="this.className='null'"> (Per le cifre decimali usare il punto)
+
+
+	</td>
+	</tr>
+
+
+	<tr >
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+Comprensivo di spese non imponibili ex art. 15 per Euro:
+
+	</td>
+	<td width="50%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<input type="text" id="anticip" size="12" value="0" onFocus="this.className='campo-focus-02'" onBlur="this.className='null'">  (Per le cifre decimali usare il punto)
+
+
+	</td>
+	</tr>
+
+
+
+<tr>
+<td width="100%" colspan="2" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<input id="ChkSG" type="checkbox"  value="1.125" checked=true  > Scorpora le spese generali
+<input id="ChkRA" type="checkbox"  value="1.20" checked=true  > Ritenuta d'acconto
+<input name "CP" id="ChkCPA2" type="radio"   value="1.02" > Cpa 2%
+<input name "CP" id="ChkCPA4" type="radio"  value="1.04" checked  > Cpa 4%
+</td>
+</tr>
+
+<tr>
+<td width="100%" colspan="2" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<input class="bot-submit" type="button" id="PulsScorp" value="Scorpora" onclick="javascript:Calcola()"> 
+<input class="bot-submit" type="button"  id="PulsReset" value="Cancella" onclick="javascript:Reset()"> 
+</td>
+</tr>
+
+<tr>
+<td width="100%" colspan="2" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<span class="pratica-resalt-01">
+Risultati:
+</span>
+</td>
+</tr>
+	<tr >
+	<td width="30%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+Totale notula:
+	</td>
+	<td width="70%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<input type="text" id="Txtotnot" size="12" value="0" readonly="readonly"> 	</td>
+	</tr>
+	<tr >
+	<td width="30%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+Spese generali
+	</td>
+	<td width="70%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<input type="text" id="Txsg" size="12" value="0" readonly="readonly">	</td>
+	</tr>
+
+	</td>
+	</tr>
+
+	<tr >
+	<td width="30%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+Imponibile CPA:
+	</td>
+	<td width="70%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<input type="text" id="Tximpcpa" size="12" value="0" readonly="readonly"> 
+	</td>
+	</tr>
+
+	<tr >
+	<td width="30%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+CPA:
+	</td>
+	<td width="70%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+ <input type="text" id="Txcpa" size="12" value="0" readonly="readonly">
+	</td>
+	</tr>
+
+	<tr >
+	<td width="30%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+Imponibile IVA:
+	</td>
+	<td width="70%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<input type="text" id="Tximpiva" size="12" value="0" readonly="readonly">
+	</td>
+	</tr>
+
+	<tr >
+	<td width="30%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+IVA:
+	</td>
+	<td width="70%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<input type="text" id="Txiva" size="12" value="0" readonly="readonly">
+	</td>
+	</tr>
+
+	<tr >
+	<td width="30%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+Ritenuta acconto (da detrarre):
+	</td>
+	<td width="70%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<input type="text" id="Txra" size="12" value="0" readonly="readonly">
+	</td>
+	</tr>
+
+
+
+	<td width="30%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'" >
+<span class="pratica-resalt-01">
+Ricalcolo: </span> (eventuali differenze rispetto alla cifra immessa possono dipendere dagli arrotondamenti dei calcoli)
+	</td>
+	<td width="70%" onMouseOver="this.className='pratica-over-sub'" onMouseOut="this.className='null'">
+<input type="text" id="Txtotali" size="12" value="0" readonly="readonly">
+	</td>
+	</tr>
+
+
+</table>
+</body>
+
+</div>
+
+
+</html>
+
+
+
+
+

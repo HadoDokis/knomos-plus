@@ -1,0 +1,84 @@
+
+<html>
+
+ <head>
+<link href="/template/skin_sutti/css/stili_sutti_main.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="FunzioniCalIVA.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div class="rinvio" name="DivCalcTerminiProcessuali">
+<table width="100%"  border="0" cellspacing="1" name="TableScIVA">
+  <tr  name="DivTitolo" id="IT">
+  <th colspan="2" width="100%" align="left"><span class="pratica-tit">
+  Scorporo IVA</span>
+  </th>
+  </tr>
+</table>
+</body>
+
+<br>
+Importo da scorporare
+<br>
+<input type="text" id="importo" size="12" value=""> 
+<br>
+Comprensivo di spese non imponibili ex art. 15 per Euro:
+<input type="text" id="anticip" size="12" value="0"> 
+<br><br>
+<input name "CP" id="ChkCPA2" type="radio"   value="1.02" > Cpa 2%
+<input name "CP" id="ChkCPA4" type="radio"  value="1.04" checked  > Cpa 4%
+<br>
+<input id="ChkSG" type="checkbox"  value="1.125" checked=true  > Scorpora le spese generali
+<br>
+<input id="ChkRA" type="checkbox"  value="1.20" checked=true  > Ritenuta d'acconto
+<br>
+<br>
+<input type="button" id="PulsScorp" value="Scorpora" onclick="javascript:Calcola()"> 
+<input type="button"  id="PulsReset" value="Cancella" onclick="javascript:Reset()"> 
+<br>
+<br>
+Riepilogo:
+<br>
+Totale notula:
+<br>
+<input type="text" id="Txtotnot" size="12" value="0"> 
+<br>
+Spese generali
+<br>
+<input type="text" id="Txsg" size="12" value="0">
+<br>
+Imponibile CPA:
+<br>
+<input type="text" id="Tximpcpa" size="12" value="0"> 
+<br>
+CPA
+<br>
+ <input type="text" id="Txcpa" size="12" value="0">
+<br>
+Imponibile IVA:
+<br>
+<input type="text" id="Tximpiva" size="12" value="0">
+<br>
+IVA:
+<br>
+<input type="text" id="Txiva" size="12" value="0">
+<br>
+Ritenuta acconto (da detrarre):
+<br>
+<input type="text" id="Txra" size="12" value="0">
+<br>
+Ricalcolo totali (il risulato deve dare un importo uguale alla cifra immessa):
+<br>
+<input type="text" id="Txtotali" size="12" value="0">
+<br>
+
+</div>
+
+
+</html>
+
+
+
+
+
