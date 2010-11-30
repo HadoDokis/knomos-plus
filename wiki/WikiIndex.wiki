@@ -1,2 +1,3 @@
 ===Setup & Deployement===
 * [Installation Installation on Windows]
+* [InstallationLinux Installation on Linux]
