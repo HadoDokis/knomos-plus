@@ -341,7 +341,7 @@ function fw_form_date($input,$name,$trueval="",$error=0)
 				.removeClass( 'ui-corner-all' )
 				.addClass( 'ui-corner-right' )
 				.css( 'height', '1.65em' )
-				.attr( 'onclick', 'toggleDP(\"#dt_$name\"); return false;' )
+				.click(function() { toggleDP(\"#dt_$name\"); return false; } )
         ;
 	});
 	</script>";
